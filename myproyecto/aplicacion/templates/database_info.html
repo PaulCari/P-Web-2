@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Información de las Bases de Datos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .database {
+            margin-bottom: 20px;
+        }
+        .database h2 {
+            margin-bottom: 10px;
+        }
+        .database ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .database li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="database">
+        <h2>Tablas en la Base de Datos Principal</h2>
+        <ul>
+            {% for table in tables_default %}
+            <li>{{ table }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="database">
+        <h2>Tablas en la Base de Datos Secundaria</h2>
+        <ul>
+            {% for table in tables_secondary %}
+            <li>{{ table }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,18 @@
+<!-- templates/contact.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Contacto</title>
+</head>
+<body>
+    <h1>Formulario de Contacto</h1>
+    <form method="post">
+        {% csrf_token %}
+        <h2>Primary Contact Form</h2>
+        {{ primary_form.as_p }}
+        <h2>Secondary Contact Form</h2>
+        {{ secondary_form.as_p }}
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
